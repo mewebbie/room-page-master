@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="main.js"></script>
+
+  <title>Frontend Mentor | Room homepage</title>
+
+  
+</head>
+<body>
+
+    <div class="horiz top">
+      <div class="nav-wrapper">
+
+        <img onclick="toggleMenuMobile()" class="logo--mobile hamburger" src="images/icon-hamburger.svg" alt="">
+        <img class="logo--mobile logo" src="images/logo.svg" alt="">
+        
+        <nav>
+          <ul>
+            <li onclick="toggleMenuMobile()" class="onlyOnMobile"><img src="images/icon-close.svg" alt=""></li>
+            <li class="hideOnMobile"><img src="images/logo.svg" alt=""></li>
+            <li class="real-li"><a>home</a></li>
+            <li class="real-li"><a>shop</a></li>
+            <li class="real-li"><a>about</a></li>
+            <li class="real-li"><a>contact</a></li>
+          </ul>
+        </nav>
+        <div class="slider-nav navi">
+          <div onclick="prevSlide(1)"><img class="slidericon left" src="images/icon-angle-left.svg" alt=""></div>
+          <div onclick="nextSlide(1)"><img class="slidericon right" src="images/icon-angle-right.svg" alt=""></div>
+        </div>
+      </div>
+      
+      <div class="slider-container">
+        <article class="slide_ele active">
+          <h2>Discover innovative ways to decorate</h2>
+          <p>We provide unmatched quality, comfort, and style for property owners across the country. 
+            Our experts combine form and function in bringing your vision to life. Create a room in your 
+            own style with our collection and make your property a reflection of you and what you love.</p>
+          <a href="">Shop now <img src="images/icon-arrow.svg" alt=""></a>
+        </article>
+        <article class="slide_ele">
+          <h2>We are available all across the globe</h2>
+          <p>With stores all over the world, it's easy for you to find furniture for your home or place of business. 
+            Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
+            store locator. Any questions? Don't hesitate to contact us today.</p>
+          <a href="">Shop now <img src="images/icon-arrow.svg" alt=""></a>
+        </article>
+        <article class="slide_ele">
+          <h2>Manufactured with the best materials</h2>
+          <p>Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
+            to ensure that every product is made as perfect and as consistent as possible. With three decades of 
+            experience in this industry, we understand what customers want for their home and office.</p>
+          <a href="">Shop now <img src="images/icon-arrow.svg" alt=""></a>
+        </article>
+
+        <div class="slider-nav">
+          <div onclick="prevSlide(0)"><img class="slidericon left" src="images/icon-angle-left.svg" alt=""></div>
+          <div onclick="nextSlide(0)"><img class="slidericon right" src="images/icon-angle-right.svg" alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="horiz bottom">
+      <div>
+        <img class="imgHoriz one" src="images/image-about-dark.jpg" alt="">
+      </div>
+      <div class="bottom-content-wrap">
+        <p class="about-fur">About our furniture</p>
+        <p>Our multifunctional collection blends design and function to suit your individual taste.
+          Make each room unique, or pick a cohesive theme that best express your interests and what
+          inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+          or anything in between. Product specialists are available to help you create your dream space.</p>
+      </div>
+      <div>
+        <img class="imgHoriz" src="images/image-about-light.jpg" alt="">
+      </div>
+    </div>
+
+    <script>
+      
+      if(document.documentElement.clientWidth <= 880) {
+        var nWrap = document.querySelector('.nav-wrapper');
+        nWrap.style.backgroundImage = "url('images/mobile-image-hero-1.jpg')";
+        // initialisation of bgImage of .nav-wrapper for mobile view
+
+        function toggleMenuMobile() {
+          document.querySelector('nav').classList.toggle('active');
+        }
+      }
+    </script>
+</body>
+</html>
